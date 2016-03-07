@@ -1,0 +1,10 @@
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.DataModels.csprojResolveAssemblyReference.cache
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\eObchod.Server.DataModels.dll.config
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\eObchod.Server.DataModels.dll
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\eObchod.Server.DataModels.pdb
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\EntityFramework.dll
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\EntityFramework.xml
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.DataModels.dll
+C:\Projekty\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.DataModels.pdb
