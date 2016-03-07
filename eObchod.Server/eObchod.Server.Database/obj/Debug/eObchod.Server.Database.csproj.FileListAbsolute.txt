@@ -18,3 +18,13 @@ C:\Projekty\eObchod\eObchod.Server\eObchod.Server.DataModels\bin\Debug\EntityFra
 C:\Projekty\eObchod\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.Database.csprojResolveAssemblyReference.cache
 C:\Projekty\eObchod\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.Database.dll
 C:\Projekty\eObchod\eObchod.Server\eObchod.Server.DataModels\obj\Debug\eObchod.Server.Database.pdb
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\eObchod.Server.Database.dll.config
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\eObchod.Server.Database.dll
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\eObchod.Server.Database.pdb
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\EntityFramework.dll
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\EntityFramework.xml
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\obj\Debug\eObchod.Server.Database.csprojResolveAssemblyReference.cache
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\obj\Debug\eObchod.Server.Database.dll
+C:\Projekty\eObchod\eObchod.Server\eObchod.Server.Database\obj\Debug\eObchod.Server.Database.pdb
