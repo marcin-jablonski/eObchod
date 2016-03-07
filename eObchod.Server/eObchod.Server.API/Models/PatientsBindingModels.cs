@@ -1,4 +1,5 @@
-﻿using eObchod.Server.Database.Entities;
+﻿using System;
+using eObchod.Server.Database.Entities;
 
 namespace eObchod.Server.API.Models
 {
@@ -7,7 +8,7 @@ namespace eObchod.Server.API.Models
         public int PatientId;
         public string FirstName;
         public string LastName;
-        public int Age;
+        public DateTime BirthDate;
         public int WardId;
         public int BlockId;
 
@@ -16,7 +17,7 @@ namespace eObchod.Server.API.Models
             return new Patient
             {
                 PatientId = model.PatientId,
-                Age = model.Age,
+                BirthDate = model.BirthDate,
                 BlockId = model.BlockId,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
