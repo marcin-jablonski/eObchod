@@ -12,5 +12,7 @@ namespace eObchod.Server.Database
 
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<Medicine> Medicines { get; set; }
+        public DbSet<Treatment> Treatments { get; set; }
     }
 }
