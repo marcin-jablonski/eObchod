@@ -53,10 +53,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\AdmittanceData.cs" />
     <Compile Include="Entities\Diagnose.cs" />
     <Compile Include="Entities\Doctor.cs" />
+    <Compile Include="Entities\HospitalizationHistory.cs" />
     <Compile Include="Entities\Medicine.cs" />
     <Compile Include="Entities\Treatment.cs" />
+    <Compile Include="Entities\TreatmentHistoryItem.cs" />
     <Compile Include="HospitalContext.cs" />
     <Compile Include="Entities\Patient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
