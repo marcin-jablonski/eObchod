@@ -6,5 +6,7 @@
     <string name="title_activity_room_list">Lista sal</string>
     <string name="title_activity_patients_list">Pacjenci</string>
     <string name="title_activity_patient_data">Dane pacjenta</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="first_name_label">Imię: </string>
+    <string name="last_name_label">Nazwisko: </string>
+    <string name="age_label">Wiek: </string>
 </resources>
