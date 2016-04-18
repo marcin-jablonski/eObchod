@@ -1,11 +1,14 @@
 <resources>
     <string name="app_name">eObchod</string>
+    <string name="api_uri">http://10.0.2.2:1200/api/</string>
     <string name="action_settings">Ustawienia</string>
     <string name="button_obchod">Rozpocznij obchód</string>
     <string name="title_activity_block_list">Lista oddziałów</string>
     <string name="title_activity_room_list">Lista sal</string>
     <string name="title_activity_patients_list">Pacjenci</string>
     <string name="title_activity_patient_data">Dane pacjenta</string>
+    <string name="patient_fragment_title_1">Dane osobowe</string>
+    <string name="patient_fragment_title_2">Historia choroby</string>
     <string name="first_name_label">Imię: </string>
     <string name="last_name_label">Nazwisko: </string>
     <string name="age_label">Wiek: </string>

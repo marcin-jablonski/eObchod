@@ -1,7 +1,5 @@
 package com.example.jablo.eobchodandroid;
 
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,8 +13,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.TextView;
 
 public class PatientDataActivity extends AppCompatActivity {
 
@@ -104,7 +100,7 @@ public class PatientDataActivity extends AppCompatActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_patient_data, container, false);
+            View rootView = inflater.inflate(R.layout.fragment_personal_data, container, false);
             //set views
             return rootView;
         }
@@ -122,26 +118,28 @@ public class PatientDataActivity extends AppCompatActivity {
 
         @Override
         public Fragment getItem(int position) {
-            // getItem is called to instantiate the fragment for the given page.
-            // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.newInstance(position + 1);
+            switch (position) {
+                case 0:
+                    return PersonalDataFragment.newInstance();
+                case 1:
+                    return TreatmentHistoryFragment.newInstance();
+            }
+            return null;
         }
 
         @Override
         public int getCount() {
-            // Show 3 total pages.
-            return 3;
+            // Show 2 total pages.
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return getString(R.string.patient_fragment_title_1);
                 case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
+                    return getString(R.string.patient_fragment_title_2);
             }
             return null;
         }

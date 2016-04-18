@@ -10,8 +10,15 @@
 
     <LinearLayout
         android:orientation="vertical"
-        android:id="@+id/patient_data"
+        android:id="@+id/patient_personal_data"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></LinearLayout>
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/patient_personal_data_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 
 </RelativeLayout>
