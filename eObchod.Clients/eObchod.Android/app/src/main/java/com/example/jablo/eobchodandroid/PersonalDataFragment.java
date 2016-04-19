@@ -32,6 +32,7 @@ public class PersonalDataFragment extends Fragment {
 
         TextView title = (TextView) rootView.findViewById(R.id.patient_personal_data_title);
         title.setText(R.string.patient_fragment_title_1);
+        title.setTextSize(title.getTextSize() + 4);
 
         return rootView;
     }

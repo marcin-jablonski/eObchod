@@ -11,5 +11,9 @@
     <string name="patient_fragment_title_2">Historia choroby</string>
     <string name="first_name_label">Imię: </string>
     <string name="last_name_label">Nazwisko: </string>
+    <string name="birth_date_label">Data urodzenia: </string>
     <string name="age_label">Wiek: </string>
+    <string name="sex_label">Płeć: </string>
+    <string name="main_book_label">Nr. ks. głównej: </string>
+    <string name="block_book_label">Nr. ks. oddziałowej: </string>
 </resources>

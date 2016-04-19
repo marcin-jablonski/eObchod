@@ -32,6 +32,7 @@ public class TreatmentHistoryFragment extends Fragment {
 
         TextView title = (TextView) rootView.findViewById(R.id.patient_treatment_history_title);
         title.setText(R.string.patient_fragment_title_2);
+        title.setTextSize(title.getTextSize() + 4);
 
         return rootView;
     }
