@@ -2,10 +2,10 @@
 
 namespace eObchod.Server.Database.Entities
 {
-    public class Diagnose
+    public class Procedure
     {
         [Key]
-        public string DiagnoseId { get; set; }
+        public string ProcedureId { get; set; }
 
         public string Description { get; set; }
     }

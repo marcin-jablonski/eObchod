@@ -53,15 +53,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\AdmittanceData.cs" />
+    <Compile Include="Entities\Admittance.cs" />
+    <Compile Include="Entities\Block.cs" />
     <Compile Include="Entities\Diagnose.cs" />
-    <Compile Include="Entities\Doctor.cs" />
-    <Compile Include="Entities\HospitalizationHistory.cs" />
+    <Compile Include="Entities\DiagnoseHistoryItem.cs" />
     <Compile Include="Entities\Medicine.cs" />
-    <Compile Include="Entities\Treatment.cs" />
-    <Compile Include="Entities\TreatmentHistoryItem.cs" />
+    <Compile Include="Entities\MedicineHistoryItem.cs" />
+    <Compile Include="Entities\Parameter.cs" />
+    <Compile Include="Entities\Room.cs" />
+    <Compile Include="Entities\Procedure.cs" />
+    <Compile Include="Entities\ProcedureHistoryItem.cs" />
+    <Compile Include="Entities\WardBookNumberItem.cs" />
     <Compile Include="HospitalContext.cs" />
     <Compile Include="Entities\Patient.cs" />
+    <Compile Include="Entities\Ward.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
