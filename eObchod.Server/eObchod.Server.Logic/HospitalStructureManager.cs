@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
 using eObchod.Server.Database;
 using eObchod.Server.Database.Entities;
 
@@ -28,7 +29,7 @@ namespace eObchod.Server.Logic
         {
             using (var ctx = new HospitalContext())
             {
-                return ctx.Blocks.FirstOrDefault(x => x.BlockId == blockId);
+                return ctx.Blocks.Include(b => b.Wards).FirstOrDefault(b => b.BlockId == blockId);
             }
         }
     }
