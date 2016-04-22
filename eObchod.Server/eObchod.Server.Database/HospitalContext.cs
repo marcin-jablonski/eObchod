@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using eObchod.Server.Database.Entities;
 
 namespace eObchod.Server.Database
@@ -10,15 +11,21 @@ namespace eObchod.Server.Database
             System.Data.Entity.Database.SetInitializer(new CreateDatabaseIfNotExists<HospitalContext>());
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        }
+
         public DbSet<Admittance> Admittances { get; set; }
         public DbSet<Block> Blocks { get; set; }
         public DbSet<Diagnose> Diagnoses { get; set; }
         public DbSet<DiagnoseHistoryItem> DiagnoseHistoryItems { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
         public DbSet<MedicineHistoryItem> MedicineHistoryItems { get; set; }
-        public DbSet<Parameter> Parameters { get; set; }
         public DbSet<Patient> Patients { get; set; }
         public DbSet<Procedure> Procedures { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
         public DbSet<ProcedureHistoryItem> ProcedureHistoryItems { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Ward> Wards { get; set; }

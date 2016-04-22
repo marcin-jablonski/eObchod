@@ -8,6 +8,7 @@ namespace eObchod.Server.Database.Entities
     {
         [Key]
         [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int WardId { get; set; }
 
         [ForeignKey("BlockId")]

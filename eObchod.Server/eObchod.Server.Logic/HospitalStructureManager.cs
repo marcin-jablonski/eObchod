@@ -1,4 +1,5 @@
-﻿using eObchod.Server.Database;
+﻿using System.Linq;
+using eObchod.Server.Database;
 using eObchod.Server.Database.Entities;
 
 namespace eObchod.Server.Logic
@@ -11,6 +12,23 @@ namespace eObchod.Server.Logic
             {
                 ctx.Blocks.Add(block);
                 ctx.SaveChanges();
+            }
+        }
+
+        public static void AddWard(Ward ward)
+        {
+            using (var ctx = new HospitalContext())
+            {
+                ctx.Wards.Add(ward);
+                ctx.SaveChanges();
+            }
+        }
+
+        public static Block GetBlock(int blockId)
+        {
+            using (var ctx = new HospitalContext())
+            {
+                return ctx.Blocks.FirstOrDefault(x => x.BlockId == blockId);
             }
         }
     }

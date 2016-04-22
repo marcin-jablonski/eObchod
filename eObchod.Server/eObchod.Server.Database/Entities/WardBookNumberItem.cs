@@ -9,15 +9,18 @@ namespace eObchod.Server.Database.Entities
         public Patient Patient { get; set; }
 
         [Key]
-        [Column(Order = 1)]
+        [Column(Order = 3)]
         public string PatientPesel { get; set; }
 
-        [ForeignKey("WardId")]
         public Ward Ward { get; set; }
 
-        [Key]
+        [Key, ForeignKey("Ward")]
         [Column(Order = 2)]
         public int WardId { get; set; }
+
+        [Key, ForeignKey("Ward")]
+        [Column(Order = 1)]
+        public int BlockId { get; set; }
 
         public string WardBookNumber { get; set; }
     }

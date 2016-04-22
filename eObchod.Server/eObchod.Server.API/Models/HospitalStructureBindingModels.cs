@@ -16,4 +16,21 @@ namespace eObchod.Server.API.Models
             };
         }
     }
+
+    public class WardBindingModel
+    {
+        public int WardId { get; set; }
+        public int BlockId { get; set; }
+        public string Name { get; set; }
+
+        public static explicit operator Ward(WardBindingModel model)
+        {
+            return new Ward
+            {
+                BlockId = model.BlockId,
+                WardId = model.WardId,
+                Name = model.Name
+            };
+        }
+    }
 }

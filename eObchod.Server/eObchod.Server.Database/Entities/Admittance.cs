@@ -21,7 +21,7 @@ namespace eObchod.Server.Database.Entities
         public int WardId { get; set; }
 
         [Key]
-        [ForeignKey("Ward"), Column(Order = 2)]
+        [ForeignKey("Ward"), Column(Order = 1)]
         public int BlockId { get; set; }
 
         [Key]

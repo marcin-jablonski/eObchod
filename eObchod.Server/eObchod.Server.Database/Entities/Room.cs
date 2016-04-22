@@ -8,6 +8,7 @@ namespace eObchod.Server.Database.Entities
     {
         [Key]
         [Column(Order = 3)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int RoomId { get; set; }
 
         public Ward Ward { get; set; }
