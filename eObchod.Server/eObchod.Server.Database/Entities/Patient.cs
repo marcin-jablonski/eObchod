@@ -15,11 +15,11 @@ namespace eObchod.Server.Database.Entities
         public DateTime BirthDate { get; set; }
         public string MainBookNumber { get; set; }
         public bool IsAdmitted { get; set; }
-        public List<WardBookNumberItem> WardBookNumbers { get; set; }
-        public List<Admittance> Admittances { get; set; }
-        public List<DiagnoseHistoryItem> Diagnoses { get; set; }
-        public List<MedicineHistoryItem> Medicines { get; set; }
-        public List<ProcedureHistoryItem> Procedures { get; set; }
+        public virtual List<WardBookNumberItem> WardBookNumbers { get; set; }
+        public virtual List<Admittance> Admittances { get; set; }
+        public virtual List<DiagnoseHistoryItem> Diagnoses { get; set; }
+        public virtual List<MedicineHistoryItem> Medicines { get; set; }
+        public virtual List<ProcedureHistoryItem> Procedures { get; set; }
         public Room Room { get; set; }
         [ForeignKey("Room"), Column(Order = 3)]
         public int RoomId { get; set; }

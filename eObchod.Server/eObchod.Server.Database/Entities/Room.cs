@@ -23,6 +23,6 @@ namespace eObchod.Server.Database.Entities
 
         public string Name { get; set; }
 
-        public List<Patient> Patients { get; set; } 
+        public virtual List<Patient> Patients { get; set; } 
     }
 }

@@ -20,6 +20,6 @@ namespace eObchod.Server.Database.Entities
 
         public string Name { get; set; }
 
-        public List<Room> Rooms { get; set; }
+        public virtual List<Room> Rooms { get; set; }
     }
 }

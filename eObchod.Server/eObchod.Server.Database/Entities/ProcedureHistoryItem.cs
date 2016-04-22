@@ -25,7 +25,7 @@ namespace eObchod.Server.Database.Entities
         [Column(Order = 3)]
         public DateTime Date { get; set; }
 
-        public List<Parameter> Parameters { get; set; }
+        public virtual List<Parameter> Parameters { get; set; }
 
         public string Comment { get; set; }
     }

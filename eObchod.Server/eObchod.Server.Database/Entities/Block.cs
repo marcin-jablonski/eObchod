@@ -10,6 +10,6 @@ namespace eObchod.Server.Database.Entities
 
         public string Name { get; set; }
 
-        public List<Ward> Wards { get; set; } 
+        public virtual List<Ward> Wards { get; set; } 
     }
 }
