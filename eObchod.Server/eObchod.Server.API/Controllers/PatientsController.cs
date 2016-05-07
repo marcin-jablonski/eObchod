@@ -11,7 +11,7 @@ namespace eObchod.Server.API.Controllers
         [HttpPost]
         public object AddPatient([FromBody] PatientBindingModel patient)
         {
-            PatientsManager.AddPatient((Patient) patient);
+            ContextFactory.GetPatientContext().AddPatient((Patient) patient);
             return Ok();
         }
     }

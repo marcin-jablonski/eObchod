@@ -48,8 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HospitalStructureManager.cs" />
-    <Compile Include="PatientsManager.cs" />
+    <Compile Include="ContextFactory.cs" />
+    <Compile Include="Contexts\HospitalStructureContext.cs" />
+    <Compile Include="Contexts\IHospitalStructureContext.cs" />
+    <Compile Include="Contexts\IPatientContext.cs" />
+    <Compile Include="Contexts\PatientContext.cs" />
+    <Compile Include="Interactions\IBlockManager.cs" />
+    <Compile Include="Interactions\IPatientsManager.cs" />
+    <Compile Include="Interactions\IRoomManager.cs" />
+    <Compile Include="Interactions\IWardManager.cs" />
+    <Compile Include="Interactions\PatientsManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +70,7 @@
       <Name>eObchod.Server.Database</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
