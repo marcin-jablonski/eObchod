@@ -1,18 +1,29 @@
-﻿using System.Web.Http;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
 using eObchod.Server.API.Models;
-using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 using eObchod.Server.Logic;
 
 namespace eObchod.Server.API.Controllers
 {
-    [Route("api/Patients")]
+    [RoutePrefix("api/Patients")]
     public class PatientsController : ApiController
     {
-        [HttpPost]
-        public object AddPatient([FromBody] PatientBindingModel patient)
+        [HttpGet]
+        public List<PatientListItemViewModel> Patients([FromUri] int blockId, [FromUri] int wardId, [FromUri] int roomId)
         {
-            ContextFactory.GetPatientContext().AddPatient((Patient) patient);
-            return Ok();
+            return
+                ContextFactory.GetPatientContext()
+                    .GetPatients(blockId, wardId, roomId)
+                    .Cast<PatientListItemViewModel>()
+                    .ToList();
+        }
+
+        [HttpGet]
+        public PatientViewModel Patient([FromUri] string pesel)
+        {
+            return (PatientViewModel) ContextFactory.GetPatientContext().GetPatient(pesel);
         }
     }
 }

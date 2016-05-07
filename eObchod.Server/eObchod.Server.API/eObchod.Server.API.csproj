@@ -91,7 +91,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\PatientsBindingModels.cs" />
+    <Compile Include="Models\DiagnoseHistoryItemViewModel.cs" />
+    <Compile Include="Models\MedicineHistoryItemViewModel.cs" />
+    <Compile Include="Models\PatientListItemViewModel.cs" />
+    <Compile Include="Models\PatientViewModel.cs" />
+    <Compile Include="Models\ProcedureHistoryItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -111,6 +115,10 @@
     <ProjectReference Include="..\eObchod.Server.Database\eObchod.Server.Database.csproj">
       <Project>{3c18002a-2017-41dd-accf-4f762a61b4e5}</Project>
       <Name>eObchod.Server.Database</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\eObchod.Server.DataStructures\eObchod.Server.DataStructures.csproj">
+      <Project>{d7810a87-1abc-4d1b-8013-d787e4113dfd}</Project>
+      <Name>eObchod.Server.DataStructures</Name>
     </ProjectReference>
     <ProjectReference Include="..\eObchod.Server.Logic\eObchod.Server.Logic.csproj">
       <Project>{dde344cf-f4b6-442b-a3af-48f2db0d055a}</Project>
