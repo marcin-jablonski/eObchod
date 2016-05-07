@@ -21,7 +21,7 @@ namespace eObchod.Server.Logic.Interactions
 
         public List<PatientListItem> GetPatients(int blockId, int wardId, int roomId)
         {
-            var patientListItems = new List<PatientListItem>();
+            List<PatientListItem> patientListItems;
             using (var ctx = new HospitalContext())
             {
                 var patients =
