@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eObchod.Server.API", "eObch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eObchod.Server.Database", "eObchod.Server.Database\eObchod.Server.Database.csproj", "{3C18002A-2017-41DD-ACCF-4F762A61B4E5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eObchod.Server.DataStructures", "eObchod.Server.DataStructures\eObchod.Server.DataStructures.csproj", "{D7810A87-1ABC-4D1B-8013-D787E4113DFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3C18002A-2017-41DD-ACCF-4F762A61B4E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C18002A-2017-41DD-ACCF-4F762A61B4E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C18002A-2017-41DD-ACCF-4F762A61B4E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7810A87-1ABC-4D1B-8013-D787E4113DFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7810A87-1ABC-4D1B-8013-D787E4113DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7810A87-1ABC-4D1B-8013-D787E4113DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7810A87-1ABC-4D1B-8013-D787E4113DFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
