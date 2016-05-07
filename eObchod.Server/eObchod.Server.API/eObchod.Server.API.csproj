@@ -87,15 +87,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HospitalStructureController.cs" />
     <Compile Include="Controllers\PatientsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BlockListItemViewModel.cs" />
     <Compile Include="Models\DiagnoseHistoryItemViewModel.cs" />
     <Compile Include="Models\MedicineHistoryItemViewModel.cs" />
     <Compile Include="Models\PatientListItemViewModel.cs" />
     <Compile Include="Models\PatientViewModel.cs" />
     <Compile Include="Models\ProcedureHistoryItemViewModel.cs" />
+    <Compile Include="Models\RoomListItemViewModel.cs" />
+    <Compile Include="Models\WardListItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
