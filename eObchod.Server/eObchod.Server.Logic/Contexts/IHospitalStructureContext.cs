@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
-using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.Logic.Contexts
 {
     public interface IHospitalStructureContext
     {
-        List<Block> GetBlocks();
-        List<Ward> GetWards(int blockId);
-        List<Room> GetRooms(int blockId, int wardId);
+        List<BlockListItem> GetBlocks();
+        List<WardListItem> GetWards(int blockId);
+        List<RoomListItem> GetRooms(int blockId, int wardId);
     }
 }

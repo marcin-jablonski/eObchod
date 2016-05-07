@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 using eObchod.Server.Logic.Interactions;
 
 namespace eObchod.Server.Logic.Contexts
@@ -17,17 +17,17 @@ namespace eObchod.Server.Logic.Contexts
             _roomManager = roomManager;
         }
 
-        public List<Block> GetBlocks()
+        public List<BlockListItem> GetBlocks()
         {
             return _blockManager.GetBlocks();
         }
 
-        public List<Ward> GetWards(int blockId)
+        public List<WardListItem> GetWards(int blockId)
         {
             return _wardManager.GetWards(blockId);
         }
 
-        public List<Room> GetRooms(int blockId, int wardId)
+        public List<RoomListItem> GetRooms(int blockId, int wardId)
         {
             return _roomManager.GetRooms(blockId, wardId);
         }
