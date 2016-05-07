@@ -16,4 +16,5 @@
     <string name="sex_label">Płeć: </string>
     <string name="main_book_label">Nr. ks. głównej: </string>
     <string name="block_book_label">Nr. ks. oddziałowej: </string>
+    <string name="pesel_label">Pesel: </string>
 </resources>
