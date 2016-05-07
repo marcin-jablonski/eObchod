@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using eObchod.Server.Database;
 using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.Logic.Interactions
@@ -7,7 +9,12 @@ namespace eObchod.Server.Logic.Interactions
     {
         public List<WardListItem> GetWards(int blockId)
         {
-            throw new System.NotImplementedException();
+            List<WardListItem> wards;
+            using (var ctx = new HospitalContext())
+            {
+                wards = ctx.Wards.Where(w => w.BlockId == blockId).Cast<WardListItem>().ToList();
+            }
+            return wards;
         }
     }
 }

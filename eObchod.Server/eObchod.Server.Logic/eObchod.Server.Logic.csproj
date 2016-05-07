@@ -59,6 +59,7 @@
     <Compile Include="Interactions\IRoomManager.cs" />
     <Compile Include="Interactions\IWardManager.cs" />
     <Compile Include="Interactions\PatientsManager.cs" />
+    <Compile Include="Interactions\RoomManager.cs" />
     <Compile Include="Interactions\WardManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
