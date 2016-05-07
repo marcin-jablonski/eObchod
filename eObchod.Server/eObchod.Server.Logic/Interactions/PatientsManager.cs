@@ -26,7 +26,9 @@ namespace eObchod.Server.Logic.Interactions
             {
                 var patients =
                     ctx.Patients.Where(
-                        patient => patient.BlockId == blockId && patient.WardId == wardId && patient.RoomId == roomId);
+                        patient =>
+                            patient.BlockId == blockId && patient.WardId == wardId && patient.RoomId == roomId &&
+                            patient.IsAdmitted);
                 patientListItems = patients.Cast<PatientListItem>().ToList();
             }
             return patientListItems;
