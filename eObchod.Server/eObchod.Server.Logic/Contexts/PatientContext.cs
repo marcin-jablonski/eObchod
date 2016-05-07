@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 using eObchod.Server.Logic.Interactions;
 
 namespace eObchod.Server.Logic.Contexts
@@ -13,7 +14,7 @@ namespace eObchod.Server.Logic.Contexts
             _patientsManager = patientsManager;
         }
 
-        public List<Patient> GetPatients(int blockId, int wardId, int roomId)
+        public List<PatientListItem> GetPatients(int blockId, int wardId, int roomId)
         {
             return _patientsManager.GetPatients(blockId, wardId, roomId);
         }
