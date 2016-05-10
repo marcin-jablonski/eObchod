@@ -22,7 +22,7 @@ namespace eObchod.Server.Database.Entities
         [Key, Column(Order = 4)]
         public DateTime AdmittanceDate { get; set; }
 
-        public DateTime DischargeDate { get; set; }
+        public DateTime? DischargeDate { get; set; }
 
         public bool Current { get; set; }
     }

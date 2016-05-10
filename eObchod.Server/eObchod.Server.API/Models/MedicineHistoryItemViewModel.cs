@@ -1,4 +1,5 @@
-﻿using eObchod.Server.Database.Entities;
+﻿using System;
+using eObchod.Server.Database.Entities;
 
 namespace eObchod.Server.API.Models
 {
@@ -13,7 +14,7 @@ namespace eObchod.Server.API.Models
             return new MedicineHistoryItemViewModel
             {
                 Name = mhi.Medicine.Name,
-                FromTo = mhi.StartDate.ToShortDateString() + " - " + mhi.EndDate.ToShortDateString(),
+                FromTo = mhi.StartDate.ToShortDateString() + (mhi.EndDate != null ? " - " + ((DateTime) mhi.EndDate).ToShortDateString() : ""),
                 Note = mhi.Note
             };
         }
