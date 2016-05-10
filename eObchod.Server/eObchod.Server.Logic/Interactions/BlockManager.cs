@@ -12,7 +12,7 @@ namespace eObchod.Server.Logic.Interactions
             List<BlockListItem> blocks;
             using (var ctx = new HospitalContext())
             {
-                blocks = ctx.Blocks.Cast<BlockListItem>().ToList();
+                blocks = ctx.Blocks.Select(x => (BlockListItem) x).ToList();
             }
             return blocks;
         }

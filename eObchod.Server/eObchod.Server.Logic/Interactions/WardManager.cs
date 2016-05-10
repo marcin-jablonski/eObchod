@@ -12,7 +12,7 @@ namespace eObchod.Server.Logic.Interactions
             List<WardListItem> wards;
             using (var ctx = new HospitalContext())
             {
-                wards = ctx.Wards.Where(w => w.BlockId == blockId).Cast<WardListItem>().ToList();
+                wards = ctx.Wards.Where(w => w.BlockId == blockId).Select(x => (WardListItem) x).ToList();
             }
             return wards;
         }

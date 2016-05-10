@@ -29,7 +29,7 @@ namespace eObchod.Server.Logic.Interactions
                         patient =>
                             patient.BlockId == blockId && patient.WardId == wardId && patient.RoomId == roomId &&
                             patient.IsAdmitted);
-                patientListItems = patients.Cast<PatientListItem>().ToList();
+                patientListItems = patients.Select(x => (PatientListItem) x).ToList();
             }
             return patientListItems;
         }
