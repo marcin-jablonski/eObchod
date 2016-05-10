@@ -1,5 +1,8 @@
 package com.example.jablo.eobchodandroid;
 
+import android.content.Intent;
+import android.support.v4.app.NavUtils;
+import android.support.v4.app.TaskStackBuilder;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
@@ -15,6 +18,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class PatientDataActivity extends AppCompatActivity {
+
+    private Intent intent;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -39,6 +44,9 @@ public class PatientDataActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        intent = getIntent();
+
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
@@ -59,17 +67,32 @@ public class PatientDataActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                Intent upIntent = NavUtils.getParentActivityIntent(this);
+                upIntent.putExtra("blockId", intent.getIntExtra("blockId", 0));
+                upIntent.putExtra("wardId", intent.getIntExtra("wardId", 0));
+                upIntent.putExtra("roomId", intent.getIntExtra("roomId", 0));
+                if(NavUtils.shouldUpRecreateTask(this, upIntent)) {
+                    TaskStackBuilder.create(this)
+                            .addNextIntentWithParentStack(upIntent)
+                            .startActivities();
+                } else {
+                    NavUtils.navigateUpTo(this, upIntent);
+                }
+                return true;
         }
-
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent();
+        intent.putExtra("blockId", intent.getIntExtra("blockId", 0));
+        intent.putExtra("wardId", intent.getIntExtra("wardId", 0));
+        intent.putExtra("roomId", intent.getIntExtra("roomId", 0));
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     /**
@@ -120,7 +143,7 @@ public class PatientDataActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return PersonalDataFragment.newInstance();
+                    return PersonalDataFragment.newInstance(intent);
                 case 1:
                     return TreatmentHistoryFragment.newInstance();
             }

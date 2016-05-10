@@ -1,5 +1,6 @@
 package com.example.jablo.eobchodandroid;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,16 +12,15 @@ import android.widget.TextView;
  * Created by jablo on 18.04.2016.
  */
 public class PersonalDataFragment extends Fragment {
+
     public PersonalDataFragment() {
 
     }
 
-    public static PersonalDataFragment newInstance() {
-
-        Bundle args = new Bundle();
+    public static PersonalDataFragment newInstance(Intent intent) {
 
         PersonalDataFragment fragment = new PersonalDataFragment();
-        fragment.setArguments(args);
+        fragment.setArguments(intent.getExtras());
         return fragment;
     }
 
