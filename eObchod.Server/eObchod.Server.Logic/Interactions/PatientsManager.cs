@@ -19,9 +19,9 @@ namespace eObchod.Server.Logic.Interactions
             return patient.Pesel;
         }
 
-        public List<PatientListItem> GetPatients(int blockId, int wardId, int roomId)
+        public List<Patient> GetPatients(int blockId, int wardId, int roomId)
         {
-            List<PatientListItem> patientListItems;
+            List<Patient> patientListItems;
             using (var ctx = new HospitalContext())
             {
                 var patients =
@@ -29,7 +29,7 @@ namespace eObchod.Server.Logic.Interactions
                         patient =>
                             patient.BlockId == blockId && patient.WardId == wardId && patient.RoomId == roomId &&
                             patient.IsAdmitted);
-                patientListItems = patients.Select(x => (PatientListItem) x).ToList();
+                patientListItems = patients.ToList();
             }
             return patientListItems;
         }
