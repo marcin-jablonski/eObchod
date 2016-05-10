@@ -33,11 +33,11 @@
         <activity
             android:name=".RoomListActivity"
             android:label="@string/title_activity_room_list"
-            android:parentActivityName=".BlockListActivity"
+            android:parentActivityName=".WardListActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.jablo.eobchodandroid.BlockListActivity" />
+                android:value="com.example.jablo.eobchodandroid.WardListActivity" />
         </activity>
         <activity
             android:name=".PatientsListActivity"
@@ -56,6 +56,15 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.jablo.eobchodandroid.PatientsListActivity" />
+        </activity>
+        <activity
+            android:name=".WardListActivity"
+            android:label="@string/title_activity_ward_list"
+            android:parentActivityName=".BlockListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.jablo.eobchodandroid.BlockListActivity" />
         </activity>
     </application>
 
