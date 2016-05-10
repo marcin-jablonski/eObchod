@@ -16,7 +16,7 @@ namespace eObchod.Server.API.Controllers
             return
                 ContextFactory.GetPatientContext()
                     .GetPatients(blockId, wardId, roomId)
-                    .Cast<PatientListItemViewModel>()
+                    .Select(x => (PatientListItemViewModel) x)
                     .ToList();
         }
 

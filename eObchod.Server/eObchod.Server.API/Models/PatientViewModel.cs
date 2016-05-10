@@ -39,9 +39,9 @@ namespace eObchod.Server.API.Models
                     patient.WardBookNumbers.FirstOrDefault(
                         wbn => wbn.WardId == patient.Admittances.FirstOrDefault(admittance => admittance.Current).WardId)
                         .WardBookNumber,
-                DiagnoseHistory = patient.Diagnoses.Cast<DiagnoseHistoryItemViewModel>().ToList(),
-                ProcedureHistory = patient.Procedures.Cast<ProcedureHistoryItemViewModel>().ToList(),
-                MedicineHistory = patient.Medicines.Cast<MedicineHistoryItemViewModel>().ToList()
+                DiagnoseHistory = patient.Diagnoses.Select(x => (DiagnoseHistoryItemViewModel) x).ToList(),
+                ProcedureHistory = patient.Procedures.Select(x => (ProcedureHistoryItemViewModel) x).ToList(),
+                MedicineHistory = patient.Medicines.Select(x => (MedicineHistoryItemViewModel) x).ToList()
             };
         }
     }

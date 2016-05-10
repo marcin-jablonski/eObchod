@@ -14,14 +14,14 @@ namespace eObchod.Server.API.Controllers
         [Route("Blocks")]
         public List<BlockListItemViewModel> Blocks()
         {
-            return ContextFactory.GetHospitalStructureContext().GetBlocks().Cast<BlockListItemViewModel>().ToList();
+            return ContextFactory.GetHospitalStructureContext().GetBlocks().Select(x => (BlockListItemViewModel) x).ToList();
         }
 
         [HttpGet]
         [Route("Wards")]
         public List<WardListItemViewModel> Wards([FromUri] int blockId)
         {
-            return ContextFactory.GetHospitalStructureContext().GetWards(blockId).Cast<WardListItemViewModel>().ToList();
+            return ContextFactory.GetHospitalStructureContext().GetWards(blockId).Select(x => (WardListItemViewModel) x).ToList();
         }
 
         [HttpGet]
@@ -31,7 +31,7 @@ namespace eObchod.Server.API.Controllers
             return
                 ContextFactory.GetHospitalStructureContext()
                     .GetRooms(blockId, wardId)
-                    .Cast<RoomListItemViewModel>()
+                    .Select(x => (RoomListItemViewModel) x)
                     .ToList();
         }
     }
