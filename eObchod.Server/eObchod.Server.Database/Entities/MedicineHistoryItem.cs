@@ -14,7 +14,7 @@ namespace eObchod.Server.Database.Entities
         [Key, Column(Order = 3)]
         public DateTime StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
+        public DateTime? EndDate { get; set; }
 
         public Medicine Medicine { get; set; }
 

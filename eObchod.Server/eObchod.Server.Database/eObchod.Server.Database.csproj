@@ -67,11 +67,28 @@
     <Compile Include="HospitalContext.cs" />
     <Compile Include="Entities\Patient.cs" />
     <Compile Include="Entities\Ward.cs" />
+    <Compile Include="Migrations\201604222053328_InitialCreate.cs" />
+    <Compile Include="Migrations\201604222053328_InitialCreate.Designer.cs">
+      <DependentUpon>201604222053328_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605102057259_NullableDates.cs" />
+    <Compile Include="Migrations\201605102057259_NullableDates.Designer.cs">
+      <DependentUpon>201605102057259_NullableDates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604222053328_InitialCreate.resx">
+      <DependentUpon>201604222053328_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605102057259_NullableDates.resx">
+      <DependentUpon>201605102057259_NullableDates.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
