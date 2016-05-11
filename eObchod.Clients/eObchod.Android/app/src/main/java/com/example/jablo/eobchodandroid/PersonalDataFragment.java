@@ -7,6 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+
+import java.util.ArrayList;
+
 /**
  * Created by jablo on 18.04.2016.
  */
@@ -34,6 +40,9 @@ public class PersonalDataFragment extends Fragment {
         title.setText(R.string.patient_fragment_title_1);
         title.setTextSize(title.getTextSize() + 4);
 
+
+
         return rootView;
     }
+
 }

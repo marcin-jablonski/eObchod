@@ -21,4 +21,12 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linear1"
+        android:paddingTop="40dp"
+        android:layout_marginTop="120dp"></LinearLayout>
+
 </RelativeLayout>
