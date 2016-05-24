@@ -18,4 +18,5 @@
     <string name="block_book_label">Nr. ks. oddziałowej: </string>
     <string name="pesel_label">Pesel: </string>
     <string name="title_activity_ward_list">Lista oddziałów</string>
+    <string name="patient_list">Lista pacjentów</string>
 </resources>

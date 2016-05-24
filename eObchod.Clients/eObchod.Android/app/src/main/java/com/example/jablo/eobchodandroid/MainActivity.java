@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -21,7 +22,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_my, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_my, menu);
         return true;
     }
 
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            startAllPatientList();
             return true;
         }
 
@@ -46,6 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     protected void startBlockListActivity() {
         Intent intent = new Intent(this, BlockListActivity.class);
+        startActivity(intent);
+    }
+
+    protected void startAllPatientList() {
+        Intent intent = new Intent(this, AllPatientList.class);
         startActivity(intent);
     }
 }
