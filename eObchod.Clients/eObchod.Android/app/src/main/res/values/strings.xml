@@ -3,7 +3,7 @@
     <string name="api_uri">http://10.0.2.2:1200/api/</string>
     <string name="action_settings">Ustawienia</string>
     <string name="button_obchod">Rozpocznij obchód</string>
-    <string name="title_activity_block_list">Lista oddziałów</string>
+    <string name="title_activity_block_list">Lista bloków</string>
     <string name="title_activity_room_list">Lista sal</string>
     <string name="title_activity_patients_list">Pacjenci</string>
     <string name="title_activity_patient_data">Dane pacjenta</string>
@@ -17,4 +17,5 @@
     <string name="main_book_label">Nr. ks. głównej: </string>
     <string name="block_book_label">Nr. ks. oddziałowej: </string>
     <string name="pesel_label">Pesel: </string>
+    <string name="title_activity_ward_list">Lista oddziałów</string>
 </resources>
