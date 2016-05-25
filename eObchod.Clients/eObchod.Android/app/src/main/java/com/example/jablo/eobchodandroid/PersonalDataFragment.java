@@ -22,7 +22,7 @@ import java.io.IOException;
  * Created by jablo on 18.04.2016.
  */
 public class PersonalDataFragment extends Fragment {
-    
+
     private String pesel;
     private View rootView;
 
