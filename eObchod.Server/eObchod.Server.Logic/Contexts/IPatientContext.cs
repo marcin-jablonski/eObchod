@@ -7,6 +7,7 @@ namespace eObchod.Server.Logic.Contexts
     public interface IPatientContext
     {
         List<PatientListItem> GetPatients(int blockId, int wardId, int roomId);
+        List<PatientListItem> GetPatients();
         PatientModel GetPatient(string pesel);
         string AddPatient(Patient patient);
     }

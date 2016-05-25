@@ -8,6 +8,7 @@ namespace eObchod.Server.Logic.Interactions
     {
         string AddPatient(Patient patient);
         List<Patient> GetPatients(int blockId, int wardId, int roomId);
+        List<Patient> GetPatients();
         PatientModel GetPatient(string pesel);
     }
 }

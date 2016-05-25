@@ -47,7 +47,7 @@ public class AllPatientList extends AppCompatActivity {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             new GetPatientList().execute(getResources().getString(R.string.api_uri)
-                    + "Patients?blockId=" + blockId + "&wardId=" + wardId + "&roomId=" + roomId);
+                    + "Patients");
         } else {
             // display error
         }
