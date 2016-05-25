@@ -3,6 +3,8 @@ package com.example.jablo.eobchodandroid;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
@@ -40,6 +42,7 @@ public class BlockListActivity extends AppCompatActivity {
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         if (networkInfo != null && networkInfo.isConnected()) {
             new GetBlockList().execute(getResources().getString(R.string.api_uri) + "HospitalStructure/Blocks");
+
         } else {
             // display error
         }
