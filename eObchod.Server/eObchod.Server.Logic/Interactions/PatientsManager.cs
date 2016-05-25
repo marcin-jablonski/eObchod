@@ -40,7 +40,7 @@ namespace eObchod.Server.Logic.Interactions
             using (var ctx = new HospitalContext())
             {
                 var patients =
-                    ctx.Patients;
+                    ctx.Patients.Where(patient => patient.IsAdmitted);
                 patientListItems = patients.ToList();
             }
             return patientListItems;
