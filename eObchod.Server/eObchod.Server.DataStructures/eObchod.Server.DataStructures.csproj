@@ -40,7 +40,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockListItem.cs" />
+    <Compile Include="DiagnoseHistoryItemModel.cs" />
+    <Compile Include="MedicineHistoryItemModel.cs" />
     <Compile Include="PatientListItem.cs" />
+    <Compile Include="PatientModel.cs" />
+    <Compile Include="ProcedureHistoryItemModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomListItem.cs" />
     <Compile Include="WardListItem.cs" />

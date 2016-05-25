@@ -20,7 +20,7 @@ namespace eObchod.Server.Logic.Contexts
             return _patientsManager.GetPatients(blockId, wardId, roomId).Select(x => (PatientListItem) x).ToList();
         }
 
-        public Patient GetPatient(string pesel)
+        public PatientModel GetPatient(string pesel)
         {
             return _patientsManager.GetPatient(pesel);
         }

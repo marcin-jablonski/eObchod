@@ -31,7 +31,6 @@ import java.io.IOException;
 public class PatientDataActivity extends AppCompatActivity {
 
     private Intent intent;
-    private PersonalData patientData;
     private String pesel;
 
     /**
@@ -126,7 +125,7 @@ public class PatientDataActivity extends AppCompatActivity {
                 case 0:
                     return PersonalDataFragment.newInstance(intent, pesel);
                 case 1:
-                    return TreatmentHistoryFragment.newInstance();
+                    return TreatmentHistoryFragment.newInstance(intent, pesel);
             }
             return null;
         }

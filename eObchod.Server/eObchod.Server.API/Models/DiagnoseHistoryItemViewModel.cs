@@ -1,4 +1,5 @@
 ﻿using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.API.Models
 {
@@ -8,11 +9,11 @@ namespace eObchod.Server.API.Models
         public string Date { get; set; }
         public string Comment { get; set; }
 
-        public static explicit operator DiagnoseHistoryItemViewModel(DiagnoseHistoryItem dhi)
+        public static explicit operator DiagnoseHistoryItemViewModel(DiagnoseHistoryItemModel dhi)
         {
             return new DiagnoseHistoryItemViewModel
             {
-                Name = dhi.Diagnose.Description,
+                Name = dhi.Diagnose,
                 Date = dhi.Date.ToShortDateString(),
                 Comment = dhi.Comment
             };

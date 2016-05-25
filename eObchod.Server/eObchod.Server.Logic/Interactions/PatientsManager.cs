@@ -34,18 +34,35 @@ namespace eObchod.Server.Logic.Interactions
             return patientListItems;
         }
 
-        public Patient GetPatient(string pesel)
+        public PatientModel GetPatient(string pesel)
         {
-            Patient patient;
+            PatientModel patient;
             using (var ctx = new HospitalContext())
             {
-                patient =
+                var patientEntity =
                     ctx.Patients.Include(p => p.Admittances)
                         .Include(p => p.Diagnoses)
                         .Include(p => p.Medicines)
                         .Include(p => p.Procedures)
                         .Include(p => p.WardBookNumbers)
                         .FirstOrDefault(p => p.Pesel == pesel);
+
+                foreach (var med in patientEntity.Medicines)
+                {
+                    med.Medicine = ctx.Medicines.FirstOrDefault(x => x.ATC == med.ATC);
+                }
+
+                foreach (var diag in patientEntity.Diagnoses)
+                {
+                    diag.Diagnose = ctx.Diagnoses.FirstOrDefault(x => x.DiagnoseId == diag.DiagnoseId);
+                }
+
+                foreach (var proc in patientEntity.Procedures)
+                {
+                    proc.Procedure = ctx.Procedures.FirstOrDefault(x => x.ProcedureId == proc.ProcedureId);
+                }
+
+                patient = (PatientModel) patientEntity;
             }
             return patient;
         }

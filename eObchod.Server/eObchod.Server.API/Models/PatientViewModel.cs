@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.API.Models
 {
@@ -19,7 +20,7 @@ namespace eObchod.Server.API.Models
         public List<ProcedureHistoryItemViewModel> ProcedureHistory { get; set; }
         public List<DiagnoseHistoryItemViewModel> DiagnoseHistory { get; set; } 
 
-        public static explicit operator PatientViewModel(Patient patient)
+        public static explicit operator PatientViewModel(PatientModel patient)
         {
             return new PatientViewModel
             {
@@ -27,18 +28,10 @@ namespace eObchod.Server.API.Models
                 Age = (DateTime.Now - patient.BirthDate).Days/365,
                 BirthDate = patient.BirthDate.ToShortDateString(),
                 FirstName = patient.FirstName,
-                Gender =
-                    patient.Gender == Database.Entities.Gender.Unknown
-                        ? "Unknown"
-                        : patient.Gender == Database.Entities.Gender.NA
-                            ? "NA"
-                            : patient.Gender == Database.Entities.Gender.Female ? "Female" : "Male",
+                Gender = patient.Gender,
                 LastName = patient.LastName,
                 MainBookNumber = patient.MainBookNumber,
-                WardBookNumber =
-                    patient.WardBookNumbers.FirstOrDefault(
-                        wbn => wbn.WardId == patient.Admittances.FirstOrDefault(admittance => admittance.Current).WardId)
-                        .WardBookNumber,
+                WardBookNumber = patient.WardBookNumber,
                 DiagnoseHistory = patient.Diagnoses.Select(x => (DiagnoseHistoryItemViewModel) x).ToList(),
                 ProcedureHistory = patient.Procedures.Select(x => (ProcedureHistoryItemViewModel) x).ToList(),
                 MedicineHistory = patient.Medicines.Select(x => (MedicineHistoryItemViewModel) x).ToList()

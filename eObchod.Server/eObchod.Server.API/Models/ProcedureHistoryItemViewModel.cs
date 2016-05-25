@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.API.Models
 {
@@ -11,14 +12,14 @@ namespace eObchod.Server.API.Models
         public string Comment { get; set; }
         public Dictionary<string, string> Parameters { get; set; } 
 
-        public static explicit operator ProcedureHistoryItemViewModel(ProcedureHistoryItem phi)
+        public static explicit operator ProcedureHistoryItemViewModel(ProcedureHistoryItemModel phi)
         {
             return new ProcedureHistoryItemViewModel
             {
-                Name = phi.Procedure.Description,
+                Name = phi.Procedure,
                 Comment = phi.Comment,
                 Date = phi.Date.ToShortDateString(),
-                Parameters = phi.Parameters.ToDictionary(par => par.Name, par => par.Value)
+                Parameters = phi.Parameters
             };
         }
     }

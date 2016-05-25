@@ -1,5 +1,6 @@
 ﻿using System;
 using eObchod.Server.Database.Entities;
+using eObchod.Server.DataStructures;
 
 namespace eObchod.Server.API.Models
 {
@@ -9,11 +10,11 @@ namespace eObchod.Server.API.Models
         public string FromTo { get; set; }
         public string Note { get; set; }
 
-        public static explicit operator MedicineHistoryItemViewModel(MedicineHistoryItem mhi)
+        public static explicit operator MedicineHistoryItemViewModel(MedicineHistoryItemModel mhi)
         {
             return new MedicineHistoryItemViewModel
             {
-                Name = mhi.Medicine.Name,
+                Name = mhi.Medicine,
                 FromTo = mhi.StartDate.ToShortDateString() + (mhi.EndDate != null ? " - " + ((DateTime) mhi.EndDate).ToShortDateString() : ""),
                 Note = mhi.Note
             };
