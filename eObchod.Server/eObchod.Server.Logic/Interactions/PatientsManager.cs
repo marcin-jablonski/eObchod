@@ -34,6 +34,18 @@ namespace eObchod.Server.Logic.Interactions
             return patientListItems;
         }
 
+        public List<Patient> GetPatients()
+        {
+            List<Patient> patientListItems;
+            using (var ctx = new HospitalContext())
+            {
+                var patients =
+                    ctx.Patients;
+                patientListItems = patients.ToList();
+            }
+            return patientListItems;
+        }
+
         public PatientModel GetPatient(string pesel)
         {
             PatientModel patient;

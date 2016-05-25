@@ -31,6 +31,15 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
+            android:name=".AllPatientList"
+            android:label="@string/patient_list"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
             android:name=".RoomListActivity"
             android:label="@string/title_activity_room_list"
             android:parentActivityName=".WardListActivity"

@@ -21,6 +21,16 @@ namespace eObchod.Server.API.Controllers
         }
 
         [HttpGet]
+        public List<PatientListItemViewModel> Patients()
+        {
+            return
+                ContextFactory.GetPatientContext()
+                    .GetPatients()
+                    .Select(x => (PatientListItemViewModel)x)
+                    .ToList();
+        }
+
+        [HttpGet]
         public PatientViewModel Patient([FromUri] string pesel)
         {
             return (PatientViewModel) ContextFactory.GetPatientContext().GetPatient(pesel);
